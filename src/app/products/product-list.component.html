@@ -4,7 +4,7 @@
     </div>
 
     <!-- Filter the Products   -->
-    <div class="panel-body">
+    <div class="panel-body ng-table">
         
 
         <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
@@ -15,13 +15,13 @@
                 <thead>
                     <tr>
                         <th>
-                            documento  <input type="text" [(ngModel)]="documento" (keyup)="filterBy($event, 'documento')">
+                            Documento  <input type="text" [(ngModel)]="documento" (keyup)="filterBy($event, 'documento')">
                         </th>
-                        <th>apellido  <input type="text" [(ngModel)]="apellido" (keyup)="filterBy($event, 'apellido')"/></th>
-                        <th>nombre  <input type="text" [(ngModel)]="nombre" (keyup)="filterBy($event, 'nombre')"/></th>
-                        <th>direccion  <input type="text" [(ngModel)]="direccion" (keyup)="filterBy($event, 'direccion')"/></th>
-                        <th>telefono  <input type="text" [(ngModel)]="telefono" (keyup)="filterBy($event, 'telefono')"/></th>
-                        <th>estado  <input type="checkbox" [(ngModel)]="estado" (change)="filterBy($event, 'estado')"/> <span (click)="reset()">X</span></th>
+                        <th>Apellido  <input type="text" [(ngModel)]="apellido" (keyup)="filterBy($event, 'apellido')"/></th>
+                        <th>Nombre  <input type="text" [(ngModel)]="nombre" (keyup)="filterBy($event, 'nombre')"/></th>
+                        <th>Dirección  <input type="text" [(ngModel)]="direccion" (keyup)="filterBy($event, 'direccion')"/></th>
+                        <th>Teléfono  <input type="text" [(ngModel)]="telefono" (keyup)="filterBy($event, 'telefono')"/></th>
+                        <th>Estado  <input type="checkbox" [(ngModel)]="estado" (change)="filterBy($event, 'estado')"/> <span (click)="reset()">X</span></th>
                     </tr>
                 </thead>
                 <tbody>

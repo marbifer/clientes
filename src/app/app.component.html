@@ -8,10 +8,7 @@
                     <a [routerLink]="['/welcome']">Inicio</a>
                 </li>
                 <li routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
-                    <a [routerLink]="['/products']">Lista de Productos</a>
-                </li>
-                <li routerLinkActive="active">
-                    <a [routerLink]="['/products', 0, 'edit']">Agregar Producto</a>
+                    <a [routerLink]="['/products']">Lista de Clientes</a>
                 </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
@@ -35,7 +32,7 @@
     </nav>
     <div class="container">
         <div class="row">
-            <div class="col-md-10">
+            <div class="col-md-12">
                 <router-outlet></router-outlet>
             </div>
             <div class="col-md-2">
