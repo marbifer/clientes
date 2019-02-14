@@ -1,0 +1,49 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+
+    <!-- Filter the Products   -->
+    <div class="panel-body">
+        
+
+        <div class="has-error" *ngIf="errorMessage">{{errorMessage}}</div>
+
+        <div class="table-responsive">
+            <table class="table"
+                   >
+                <thead>
+                    <tr>
+                        <th>
+                            documento  <input type="text" [(ngModel)]="documento" (keyup)="filterBy($event, 'documento')">
+                        </th>
+                        <th>apellido  <input type="text" [(ngModel)]="apellido" (keyup)="filterBy($event, 'apellido')"/></th>
+                        <th>nombre  <input type="text" [(ngModel)]="nombre" (keyup)="filterBy($event, 'nombre')"/></th>
+                        <th>direccion  <input type="text" [(ngModel)]="direccion" (keyup)="filterBy($event, 'direccion')"/></th>
+                        <th>telefono  <input type="text" [(ngModel)]="telefono" (keyup)="filterBy($event, 'telefono')"/></th>
+                        <th>estado  <input type="checkbox" [(ngModel)]="estado" (change)="filterBy($event, 'estado')"/> <span (click)="reset()">X</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let cliente of clientes">
+                       
+                        <td>
+                                <a [routerLink]="[cliente.documento]" 
+                                [queryParams]="{filterBy: listFilter}">
+                                {{ cliente.documento  }}
+                             </a>
+                        </td>
+                        <td>{{ cliente.apellido  }}</td>
+                        <td>{{ cliente.nombre }}</td>
+                        <td>{{ cliente.direccion  }}</td>
+                        <td>{{ cliente.telefono }}</td>
+                        <td *ngIf="cliente.estado === 0">Inactivo</td>
+                        <td *ngIf="cliente.estado === 1">Activo</td>
+                        
+                       
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
