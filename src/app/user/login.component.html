@@ -15,7 +15,7 @@
                                                userNameVar.dirty) && 
                                                !userNameVar.valid }">
                     <label class="col-md-2 control-label" 
-                           for="userNameId">User Name</label>
+                           for="userNameId">Usuario</label>
 
                     <div class="col-md-8">
                         <input class="form-control" 
@@ -30,7 +30,7 @@
                                                          userNameVar.dirty) &&
                                                          userNameVar.errors">
                             <span *ngIf="userNameVar.errors.required">
-                                User name is required.
+                                El nombre de usuario es requerido.
                             </span>
                         </span>
                     </div>
@@ -40,7 +40,7 @@
                      [ngClass]="{'has-error': (passwordVar.touched || 
                                                passwordVar.dirty) && 
                                                !passwordVar.valid }">
-                    <label class="col-md-2 control-label" for="passwordId">Password</label>
+                    <label class="col-md-2 control-label" for="passwordId">Contraseña</label>
 
                     <div class="col-md-8">
                         <input class="form-control" 
@@ -55,7 +55,7 @@
                                                          passwordVar.dirty) &&
                                                          passwordVar.errors">
                             <span *ngIf="passwordVar.errors.required">
-                                Password is required.
+                                La Contraseña es requerida.
                             </span>
                         </span>
                     </div>
